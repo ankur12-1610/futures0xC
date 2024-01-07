@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Jost&family=Open+Sans&family=Playfair+Display:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b1b2d;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.navbar-text {
+  font-size: 20px;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust this to control vertical centering */
+}
+
+.center-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.svg-background {
+  min-width: 100%;
+  height: 100%; /* Adjust height as needed */
+  background-image: url("./assets/Background.svg");
+  background-size: cover; /* Or contain, depending on how you want the SVG to scale */
+  background-repeat: no-repeat;
+  /* Other background properties like position, etc. can be adjusted here */
+  background-position: 2%;
+  background-color: #0D1224;
+}
+.gradient {
+  background-image: linear-gradient(180deg, #0b1b2d, #0d1224);
+}
+.nav-link {
+  color: rgba(234, 240, 246, 0.3);
+}
+
+.nav-link.active {
+  color: rgba(234, 240, 246, 0.9);
+}
+
+.bg-translucent-bottom {
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 35, 55, 1),
+    rgba(255, 255, 255, 0.1)
+  );
+}
+
+.bg-translucent-top {
+  background: linear-gradient(
+    to top,
+    rgba(18, 35, 55, 1),
+    rgba(255, 255, 255, 0.1)
+  );
+}
+
+/* Custom scrollbar styles */
+/* WebKit */
+::-webkit-scrollbar {
+  background-color: #061323;
+  width: 2px; /* Adjust the width of the scrollbar as needed */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #061323; /* Color of the scrollbar thumb */
+  border-radius: 3px; /* Round the scrollbar thumb */
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Change to a different color on hover if desired */
+  /* Increase size on hover */
+  width: 40px;
+}
+/* Mozilla Firefox */
+/* Note: Firefox does not support styling the scrollbar directly. These styles apply to a container with scrollbar-styled content */
+/* Add the class `scrollbar-thin` to the container */
+.scrollbar-thin {
+  scrollbar-color: #061323 transparent; /* scrollbar-color accepts two colors: thumb and track */
+  scrollbar-width: thin; /* Set the width of the scrollbar */
+}
+
+.main-container {
+  display: flex;
+}
+main {
+  padding: 10px;
+}
+
+.title {
+  font-size: 3rem;
+  display: grid;
+  place-items: center;
+}
+
+/* Sidebar */
+.sidebar {
+  background: rgb(0, 7, 61);
+  color: white;
+  height: 90vh;
+  overflow-y: auto;
+}
+
+.top_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+.logo {
+  font-size: 18px;
+  line-height: 0;
+}
+.bars {
+  width: 30px;
+}
+.hide {
+  display: none;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  height: 30px;
+  padding: 10px;
+}
+
+.routes {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.link {
+  display: flex;
+  color: white;
+  gap: 10px;
+  padding: 5px 10px;
+  border-right: 4px solid transparent;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.link:hover {
+  border-right: 4px solid white;
+  background: rgb(45, 51, 89);
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.link_text {
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.menu {
+  display: flex;
+  color: white;
+
+  padding: 5px 10px;
+  border-right: 4px solid transparent;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  justify-content: space-between;
+}
+.menu_item {
+  display: flex;
+  gap: 10px;
+}
+.menu_container {
+  display: flex;
+  flex-direction: column;
+}
+.menu_container .link {
+  padding-left: 20px;
+  border-bottom: #fff 0.5px solid;
+}
